@@ -30,7 +30,7 @@ export default function CarouselBanner() {
         <div className="lg:col-span-1 bg-gradient-to-b from-[#ffedd6] via-[#ffc3e3] to-white rounded-lg p-4 flex flex-col items-center text-center text-sm">
           <div className="flex items-center gap-2 mb-2">
             <img
-              src="src/assets/smalllogo.png"
+              src="Daraz/src/assets/smalllogo.png"
               alt="logo"
               className="h-6 object-contain"
             />
