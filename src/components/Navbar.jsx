@@ -3,6 +3,8 @@ import { ShoppingCart } from "@mui/icons-material";
 import { useAuth } from "../contexts/AuthContext";
 import AuthModal from "./AuthModal";
 import CategoryLinks from "./CategoryLinks";
+import whitelogo from "/whitelogo.png";
+
 
 export default function Navbar() {
   const [showAuth, setShowAuth] = useState(false);
@@ -62,7 +64,7 @@ export default function Navbar() {
         <div className="bg-[#F85606]">
           <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-4">
             <img
-              src="./src/assets/whitelogo.png"
+              src={whitelogo}
               alt="Daraz"
               className="h-10 md:h-12 object-contain"
             />

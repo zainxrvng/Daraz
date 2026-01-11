@@ -1,3 +1,10 @@
+import visa from "/visa.png";
+import mastercard from "/mastercard.png";
+import cod from "/cod.png";
+import playStore from "/play-store.png";
+import appStore from "/app-store.png";
+
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -71,23 +78,15 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3">Payment Methods</h3>
           <div className="flex gap-2 mb-4">
-            <img src="src/assets/visa.png" alt="Visa" className="h-10" />
-            <img src="src/assets/mastercard.png" alt="MC" className="h-10" />
-            <img src="src/assets/cod.png" alt="COD" className="h-10" />
+            <img src={visa} alt="Visa" className="h-10" />
+            <img src={mastercard} alt="MC" className="h-10" />
+            <img src={cod} alt="COD" className="h-10" />
           </div>
 
           <h3 className="font-semibold mb-2">Verified by</h3>
           <div className="flex gap-2">
-            <img
-              src="src/assets/visa.png"
-              alt="visa"
-              className="h-10 grayscale"
-            />
-            <img
-              src="src/assets/mastercard.png"
-              alt="mc"
-              className="h-10 grayscale"
-            />
+            <img src={visa} alt="visa" className="h-10 grayscale" />
+            <img src={mastercard} alt="mc" className="h-10 grayscale" />
           </div>
         </div>
 
@@ -98,14 +97,14 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <a href="#">
               <img
-                src="src/assets/play-store.png"
+                src={playStore}
                 alt="Google Play"
                 className="h-25 object-contain"
               />
             </a>
             <a href="#">
               <img
-                src="src/assets/app-store.png"
+                src= {appStore}
                 alt="App Store"
                 className="h-10 object-contain"
               />

@@ -1,5 +1,8 @@
 import { Carousel } from "flowbite-react";
 import StarIcon from "@mui/icons-material/Star";
+import pic1 from "/pic1.webp";
+import pic2 from "/pic2.webp";
+import smalllogo from "/smalllogo.png";
 
 export default function CarouselBanner() {
   return (
@@ -9,12 +12,12 @@ export default function CarouselBanner() {
         <div className="lg:col-span-3 h-56 sm:h-64 md:h-80 2xl:h-96 rounded-lg overflow-hidden">
           <Carousel slideInterval={5000} indicators={false}>
             <img
-              src="src/assets/pic1.webp"
+              src={pic1}
               className="w-full h-full object-cover"
               alt="slide1"
             />
             <img
-              src= "src/assets/pic2.webp"
+              src={pic2}
               className="w-full h-full object-cover"
               alt="slide2"
             />
@@ -29,11 +32,7 @@ export default function CarouselBanner() {
         {/* right banner  1/5 width on desktop */}
         <div className="lg:col-span-1 bg-gradient-to-b from-[#ffedd6] via-[#ffc3e3] to-white rounded-lg p-4 flex flex-col items-center text-center text-sm">
           <div className="flex items-center gap-2 mb-2">
-            <img
-              src="Daraz/src/assets/smalllogo.png"
-              alt="logo"
-              className="h-6 object-contain"
-            />
+            <img src={smalllogo} alt="logo" className="h-6 object-contain" />
             <span className="font-semibold">Try Daraz App</span>
           </div>
 
