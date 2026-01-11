@@ -9,17 +9,17 @@ export default function CarouselBanner() {
         <div className="lg:col-span-3 h-56 sm:h-64 md:h-80 2xl:h-96 rounded-lg overflow-hidden">
           <Carousel slideInterval={5000} indicators={false}>
             <img
-              src="/src/assets/pic1.webp"
+              src="src/assets/pic1.webp"
               className="w-full h-full object-cover"
               alt="slide1"
             />
             <img
-              src="/src/assets/pic2.webp"
+              src= "src/assets/pic2.webp"
               className="w-full h-full object-cover"
               alt="slide2"
             />
             <img
-              src="/src/assets/pic1.webp"
+              src="src/assets/pic1.webp"
               className="w-full h-full object-cover"
               alt="slide3"
             />
@@ -30,7 +30,7 @@ export default function CarouselBanner() {
         <div className="lg:col-span-1 bg-gradient-to-b from-[#ffedd6] via-[#ffc3e3] to-white rounded-lg p-4 flex flex-col items-center text-center text-sm">
           <div className="flex items-center gap-2 mb-2">
             <img
-              src="/src/assets/smalllogo.png"
+              src="src/assets/smalllogo.png"
               alt="logo"
               className="h-6 object-contain"
             />

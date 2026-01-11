@@ -62,7 +62,7 @@ export default function Navbar() {
         <div className="bg-[#F85606]">
           <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-4">
             <img
-              src="/src/assets/whitelogo.png"
+              src="./src/assets/whitelogo.png"
               alt="Daraz"
               className="h-10 md:h-12 object-contain"
             />

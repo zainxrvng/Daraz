@@ -71,22 +71,22 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3">Payment Methods</h3>
           <div className="flex gap-2 mb-4">
-            <img src="/src/assets/visa.svg" alt="Visa" className="h-6" />
-            <img src="/src/assets/mastercard.svg" alt="MC" className="h-6" />
-            <img src="/src/assets/cod.png" alt="COD" className="h-6" />
+            <img src="src/assets/visa.png" alt="Visa" className="h-10" />
+            <img src="src/assets/mastercard.png" alt="MC" className="h-10" />
+            <img src="src/assets/cod.png" alt="COD" className="h-10" />
           </div>
 
           <h3 className="font-semibold mb-2">Verified by</h3>
           <div className="flex gap-2">
             <img
-              src="/src/assets/visa.svg"
+              src="src/assets/visa.png"
               alt="visa"
-              className="h-6 grayscale"
+              className="h-10 grayscale"
             />
             <img
-              src="/src/assets/mastercard.svg"
+              src="src/assets/mastercard.png"
               alt="mc"
-              className="h-6 grayscale"
+              className="h-10 grayscale"
             />
           </div>
         </div>
@@ -98,14 +98,14 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <a href="#">
               <img
-                src="/src/assets/play-store.png"
+                src="src/assets/play-store.png"
                 alt="Google Play"
-                className="h-10 object-contain"
+                className="h-25 object-contain"
               />
             </a>
             <a href="#">
               <img
-                src="/src/assets/app-store.png"
+                src="src/assets/app-store.png"
                 alt="App Store"
                 className="h-10 object-contain"
               />
