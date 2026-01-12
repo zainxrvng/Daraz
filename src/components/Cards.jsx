@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 
-export default function Cards() {
+export default function Cards( {search} ) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  
+
+const filtered = products.filter((p) =>
+  (search || "").toLowerCase() === ""
+    ? true
+    : p.title.toLowerCase().includes(search.toLowerCase())
+);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -23,7 +30,7 @@ export default function Cards() {
   return (
     <main className="max-w-7xl mx-auto px-4 py-6">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        {products.map((p) => (
+        {filtered.map((p) => (
           <ProductCard
             key={p.id}
             img={p.image}
@@ -32,7 +39,9 @@ export default function Cards() {
             price={p.price.toFixed(2)}
             oldPrice={(p.price * 1.5).toFixed(2)}
             discount={20}
-            rating={p.rating.rate}
+            rating={p.rating}
+            description={p.description}
+            id={p.id}
           />
         ))}
       </div>

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Google, Facebook } from "@mui/icons-material";
 import { useAuth } from "../contexts/AuthContext";
 import toast from "react-hot-toast";
+import whitelogo from "/whitelogo.png";
 
 export default function AuthSheet({ startMode = "login", close }) {
   const { login, register: saveReg } = useAuth();
@@ -12,7 +13,6 @@ export default function AuthSheet({ startMode = "login", close }) {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
   const onSubmit = (data) => {
@@ -32,7 +32,7 @@ export default function AuthSheet({ startMode = "login", close }) {
     <div className="w-full max-h-[90vh] overflow-y-auto max-w-md bg-white rounded-xl shadow-lg">
       {/* yellow banner */}
       <div className="bg-yellow-100 text-xs p-3 text-center flex items-center justify-center gap-2">
-        <img src="/src/assets/smalllogo.png" alt="Daraz" className="h-4" />
+        <img src={whitelogo} alt="Daraz" className="h-4" />
         <span>
           Try Daraz App & get <b>Lowest Prices</b> every day!
         </span>
@@ -40,7 +40,7 @@ export default function AuthSheet({ startMode = "login", close }) {
 
       {/* orange header */}
       <div className="bg-[#F85606] text-white p-4 flex items-center justify-between">
-        <img src="/src/assets/whitelogo.png" alt="Daraz" className="h-8" />
+        <img src={whitelogo} alt="Daraz" className="h-8" />
         <button onClick={close} className="text-sm underline">
           ✕
         </button>

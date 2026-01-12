@@ -1,15 +1,21 @@
 import { useState } from "react";
 import { ShoppingCart } from "@mui/icons-material";
 import { useAuth } from "../contexts/AuthContext";
+import { useCart } from "../contexts/CartContext";
 import AuthModal from "./AuthModal";
 import CategoryLinks from "./CategoryLinks";
 import whitelogo from "/whitelogo.png";
+import Searchbar from "./Searchbar";
+import Cards from "./Cards";
 
 
 export default function Navbar() {
   const [showAuth, setShowAuth] = useState(false);
   const [authMode, setAuthMode] = useState("login");
   const { user, logout } = useAuth();
+  const { totalQty } = useCart();
+  
+
 
   const openAuth = (mode) => {
     setAuthMode(mode);
@@ -26,7 +32,6 @@ export default function Navbar() {
             <button className="hover:underline">Sell on Daraz</button>
             <button className="hover:underline">Help & Support</button>
 
-            {/* user / auth swap */}
             {user ? (
               <>
                 <span className="text-white text-sm">
@@ -68,26 +73,24 @@ export default function Navbar() {
               alt="Daraz"
               className="h-10 md:h-12 object-contain"
             />
-            <div className="flex-1 relative">
-              <input
-                type="text"
-                placeholder="Search in Daraz"
-                className="w-full px-4 py-2.5 rounded-l-md focus:outline-none"
-              />
-              <button className="absolute right-0 top-0 h-full px-5 bg-yellow-400 text-black font-semibold rounded-r-md hover:bg-yellow-500">
-                SEARCH
-              </button>
-            </div>
+            <Searchbar />
 
             <div className="flex items-center gap-3 text-white text-sm">
               <div className="hidden md:flex items-center gap-2">
-                <ShoppingCart sx={{ fontSize: 28 }} />
+                <div className="relative">
+                  <ShoppingCart sx={{ fontSize: 28 }} />
+                  {totalQty > 0 && (
+                    <span className="absolute -top-1 -right-2 bg-orange-500 text-white text-xs rounded-full h-5 w-5 grid place-items-center">
+                      {totalQty}
+                    </span>
+                  )}
+                </div>
                 <span className="hidden lg:inline">Cart</span>
               </div>
-              {/* duplicate removed */}
             </div>
           </div>
         </div>
+
         <CategoryLinks />
       </header>
 

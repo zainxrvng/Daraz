@@ -6,13 +6,17 @@ import App from './App.jsx'
 import "./index.css";
 import { AuthProvider } from "./contexts/AuthContext";
 import { Toaster } from "react-hot-toast";
+import { CartProvider } from "./contexts/CartContext";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter basename="/Daraz">
       <AuthProvider>
-        <App />
-        <Toaster position="top-center" />
+        <CartProvider>
+          <App />
+          <Toaster position="top-center" />
+        </CartProvider>
       </AuthProvider>
     </BrowserRouter>
   </StrictMode>
